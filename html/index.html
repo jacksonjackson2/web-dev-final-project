@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/global.css" rel="stylesheet">
+    <style>
+        #flex-header {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &>div>* {
+                margin: 0;
+            }
+
+            & h4 {
+                text-decoration: underline;
+                text-align: end;
+            }
+        }
+
+        #page-buttons {
+            width: 100%;
+            text-align: center;
+            margin-top: 15px;
+
+            & nav {
+                margin-top: 10px;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                justify-items: center;
+                grid-auto-rows: auto;
+                gap: 10px;
+
+                & a {
+                    align-content: center;
+                    border: solid 2px black;
+                    height: 30px;
+                    width: 80%;
+                }
+            }
+        }
+
+        @media screen and (min-width: 500px) {
+            #page-buttons nav {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (min-width: 700px) {
+            #page-buttons nav {
+                gap: 0;
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+    <title>Personal Project | Home</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="nav-buttons">
+                <div style="width: 20px; height: 20px; background-color: black;" id="dir-btn" aria-controls="dir"></div>
+                <div style="width: 20px; height: 20px; background-color: black;" id="home-btn"></div>
+            </div>
+            <div style="width: 20px; height: 20px; background-color: black;" id="cube-opts-btn"
+                aria-controls="cube-opts"></div>
+        </nav>
+        <div id="cube-opts" class="collapse">
+            <div class="collapse-card">
+                <h3>Cube Options</h3>
+                <form>
+                    <label for="bounce">Cube Bounce</label>
+                    <input id="bounce" type="number" value="0" min="0" max="100">
+                    <label for="friction">Cube Friction</label>
+                    <input id="friction" type="number" value="30" min="0" max="100">
+                    <label for="cube-color">Cube Color</label>
+                    <input id="cube-color" type="color" value="#ff0000">
+                </form>
+            </div>
+        </div>
+        <div id="dir" class="collapse">
+            <div class="collapse-card">
+                <a href="./index.html">Home</a>
+                <a href="./aboutme.html">About Me</a>
+                <a href="./resume.html">Resume</a>
+                <a href="./examples.html">Examples</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <div id="flex-header">
+        <div>
+            <h1>Jackson The Website</h1>
+            <h4>Now With Cube</h4>
+        </div>
+        <div id="page-buttons">
+            <span>hello</span>
+            <nav>
+                <a class="solid" href="./aboutme.html">About Me</a>
+                <a class="solid" href="./resume.html">Resume</a>
+                <a class="solid" href="./examples.html">Examples</a>
+                <a class="solid" href="./contact.html">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script src="../scripts/cube.js"></script>
+<script src="../scripts/navbar.js"></script>

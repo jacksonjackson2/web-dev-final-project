@@ -1,0 +1,74 @@
+#dir .collapse-card {
+    width: 188px;
+    gap: 0;
+
+    & a {
+        text-decoration: none;
+        color: black;
+        border-top: #000 2px solid;
+        height: 50px;
+        width: 100%;
+        align-content: center;
+        text-align: center;
+    }
+}
+
+#cube-opts {
+    right: 0px;
+
+    .collapse-card {
+        width: 158px;
+        padding: 15px;
+    }
+}
+
+.collapse {
+    position: absolute;
+
+    &:not(.show) {
+        display: none;
+    }
+}
+
+.collapsing {
+    width: 0;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    transition: width .35s ease;
+}
+
+.collapse-card {
+    position: relative;
+    display: flex;
+    z-index: 101;
+    background-color: white;
+    flex-direction: column;
+    gap: 10px;
+
+    & form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    & h3 {
+        margin: 0;
+    }
+}
+
+.options-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity 0.15s linear;
+
+    &.show {
+        opacity: 0.5;
+    }
+}

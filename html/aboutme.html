@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/global.css" rel="stylesheet">
+    <title>Personal Project | About Me</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="nav-buttons">
+                <div style="width: 20px; height: 20px; background-color: black;" id="dir-btn" aria-controls="dir"></div>
+                <div style="width: 20px; height: 20px; background-color: black;" id="home-btn"></div>
+            </div>
+            <h1>Jackson The Website</h1>
+            <div style="width: 20px; height: 20px; background-color: black;" id="cube-opts-btn"
+                aria-controls="cube-opts"></div>
+        </nav>
+        <div id="cube-opts" class="collapse">
+            <div class="collapse-card">
+                <h3>Cube Options</h3>
+                <form>
+                    <label for="bounce">Cube Bounce</label>
+                    <input id="bounce" type="number" value="0" min="0" max="100">
+                    <label for="friction">Cube Friction</label>
+                    <input id="friction" type="number" value="30" min="0" max="100">
+                    <label for="cube-color">Cube Color</label>
+                    <input id="cube-color" type="color" value="#ff0000">
+                </form>
+            </div>
+        </div>
+        <div id="dir" class="collapse">
+            <div class="collapse-card">
+                <a href="./index.html">Home</a>
+                <a href="./aboutme.html">About Me</a>
+                <a href="./resume.html">Resume</a>
+                <a href="./examples.html">Examples</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+    <h1 id="page-title">About Me</h1>
+    <div class="card">
+        <div class="card-body">
+            <p>Hello yes i am jackson</p>
+            <p>I have been working with web development and computer programing since like 5th grade.</p>
+            <h3>Hobbies</h3>
+            <ul>
+                <li>Programing</li>
+                <li>Video Games</li>
+                <li>Not Being Funny</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="../scripts/cube.js"></script>
+<script src="../scripts/navbar.js"></script>

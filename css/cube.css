@@ -1,0 +1,9 @@
+#cube {
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    border: solid 2px black;
+    position: absolute;
+    user-select: none;
+    top: 100px;
+}
