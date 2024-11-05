@@ -15,8 +15,11 @@ header {
         justify-content: space-between;
         background-color: rgba(232, 232, 232, 0.811);
 
-        & div {
-            margin: 10px;
+        & img {
+            margin: 15px;
+            user-select: none;
+            width: 20px;
+            height: 20px;
         }
     }
 }
